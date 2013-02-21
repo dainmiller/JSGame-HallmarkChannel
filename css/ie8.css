@@ -1,0 +1,67 @@
+/* Fixes for IE8 and below not accepting nth-child */
+
+.flip:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;}
+.flip:first-child + .flip {
+    position: absolute;
+    left: 110px;
+    top: 0;}
+.flip:first-child + .flip + .flip {
+    position: absolute;
+    left: 220px;
+    top: 0;}
+.flip:first-child + .flip + .flip + .flip {
+    position: absolute;
+    left: 330px;
+    top: 0;}
+.flip:first-child + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 0;
+    top: 120px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 110px;
+    top: 120px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 220px;
+    top: 120px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 330px;
+    top: 120px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 0;
+    top: 240px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 110px;
+    top: 240px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 220px;
+    top: 240px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 330px;
+    top: 240px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 0;
+    top: 360px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 110px;
+    top: 360px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip {
+    position: absolute;
+    left: 220px;
+    top: 360px;}
+.flip:first-child + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip + .flip  + .flip + .flip + .flip {
+    position: absolute;
+    left: 330px;
+    top: 360px;
+}

@@ -1,0 +1,711 @@
+/* =====================
+// GAME PAGE
+======================= */
+a {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 548px;
+    display: block;
+    /*overflow: hidden;*/
+    zoom: 1;
+}
+
+body {
+    line-height: 1;
+    background: url('../images/game-bg.png') 0px 58px repeat-y;
+    height: 100%;
+    width: 548px;
+    -webkit-box-shadow: inset 3px 3px 540px #280606;
+       -moz-box-shadow: inset 3px 3px 540px #280606;
+            box-shadow: inset 3px 3px 540px #280606;
+}
+
+a {
+    font-family: 'Gotham Light', Helvetica, sans-serif;
+}
+
+/* =====================
+// Header
+======================= */
+
+#psudo-iframe {
+    position: absolute;
+    overflow: hidden;
+}
+
+.header {
+    background: url('../images/header-bg-1px.png') repeat-x;
+    /*background: rgba(244,77,137,67);*/
+    height: 65px;
+    width: 548px
+}
+
+.inner-header-wrapper {
+    margin-left: 80px;
+    width: 500px;
+    position: relative;
+    top: 25px;
+}
+
+.header-dotted-line {
+    height: 5px;
+    width: 75px;
+    background: url('../images/dotted-line.png');
+    float: left;
+    position: relative;
+    top: 5px;
+}
+
+.inner-header-wrapper > h1 {
+    float: left;
+    font-family: 'Gotham Bold', Helvetica, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-left: 9px;
+    bottom: 3px;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.heart-left {
+    background: url('../images/heart-left.png');
+    height: 15px;
+    width: 19px;
+    float: left;
+}
+
+.heart-right {
+    background: url('../images/heart-right.png');
+    height: 15px;
+    width: 19px;
+    margin-left: 5px;
+    float: left;
+}
+
+.header-curtain {
+    background: url('../images/header-curtain.png') 10px -1px repeat-x;
+    width: 100%;
+    height: 20px;
+}
+
+
+/* =====================
+// Card/Game Area
+======================= */
+
+.card {
+    cursor: pointer;
+}
+
+.game-content {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#game {
+    position: relative;
+    height: 460px;
+    width: 425px;
+    margin: 0 auto;
+}
+
+#cards {
+    position: relative;    
+    width: 425px;
+    height: 520px;
+    margin:0 auto;
+}
+
+.face.back {
+    background: url('../images/back.png');
+    height: 14px;
+    width: 14px;
+    height: 111px;
+    width: 100px;
+}
+
+.face.front {
+    /* Background gets added programmatically */
+    /*background: url('../images/test-front1.png');*/
+    width: 101px;
+    height: 111px;
+    float: left;
+    position: relative;
+    right: 0;
+    z-index: -1;
+}
+
+/* For Card Flip */
+.flip {
+  -webkit-perspective: 800;
+  -moz-perspective: 800;
+  -ms-perspective: 800;
+  -ie-perspective: 800;
+    width: 101px;
+    height: 111px;
+    position: absolute;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+  -moz-transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg);
+  -ie-transform: rotatey(-180deg);
+}
+
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -ie-transform-style: preserve-3d;
+
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -ie-transition: 0.5s;
+}
+
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -ie-backface-visibility: hidden;
+
+}
+
+.flip .card .back {
+  z-index: 1;
+    cursor: pointer;
+}
+
+.flip .card .front {
+  -webkit-transform: rotatey(-180deg);
+  -moz-transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg);
+  -ie-transform: rotatey(-180deg);
+    cursor: pointer;
+}
+/* End Required for Card Flip */
+
+.card {
+    position: absolute;
+}
+
+.flip:nth-child(1)  {
+    position: absolute;
+    left: 0;
+    top: 0;}
+.flip:nth-child(2)  {
+    position: absolute;
+    left: 110px;
+    top: 0;}
+.flip:nth-child(3)  {
+    position: absolute;
+    left: 220px;
+    top: 0;}
+.flip:nth-child(4)  {
+    position: absolute;
+    left: 330px;
+    top: 0;}
+.flip:nth-child(5)  {
+    position: absolute;
+    left: 0;
+    top: 120px;}
+.flip:nth-child(6)  {
+    position: absolute;
+    left: 110px;
+    top: 120px;}
+.flip:nth-child(7)  {
+    position: absolute;
+    left: 220px;
+    top: 120px;}
+.flip:nth-child(8)  {
+    position: absolute;
+    left: 330px;
+    top: 120px;}
+.flip:nth-child(9)  {
+    position: absolute;
+    left: 0;
+    top: 240px;}
+.flip:nth-child(10) {
+    position: absolute;
+    left: 110px;
+    top: 240px;}
+.flip:nth-child(11) {
+    position: absolute;
+    left: 220px;
+    top: 240px;}
+.flip:nth-child(12) {
+    position: absolute;
+    left: 330px;
+    top: 240px;}
+.flip:nth-child(13) {
+    position: absolute;
+    left: 0;
+    top: 360px;}
+.flip:nth-child(14) {
+    position: absolute;
+    left: 110px;
+    top: 360px;}
+.flip:nth-child(15) {
+    position: absolute;
+    left: 220px;
+    top: 360px;}
+.flip:nth-child(16) {
+    position: absolute;
+    left: 330px;
+    top: 360px;
+}
+
+.js-popup-wrapper {
+    width: 255px;
+    height: 100px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden !important;
+    box-shadow: 0px 0px 14px rgba(0,0,0,0.5);
+    z-index: 10001;
+    position: absolute;
+}
+
+.js-popup-text {
+    text-align: center;
+    font-family: "Gotham Light";
+    font-size: 12px;
+    color: #e51858;
+    width: 210px;
+    margin-left: 21px;
+    margin-top: 10px;
+}
+
+.js-popup-button {
+    cursor: pointer;
+    cursor: hand;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 95px;
+    margin-top: 11px;
+    width: 65px;
+    height: 20px;
+    background: #d8164b;
+    border-radius: 9px;
+    padding-top: 2px;
+}
+
+.js-popup-button > a {
+    font-size: 14px;
+    font-family: "Gotham Bold";
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+/* =====================
+// Outside Card Area
+======================= */
+
+.incorrect-match-heart {
+    position: absolute;
+    bottom: -123px;
+    left: 143px;
+}
+
+.heart-main-left {
+    background: url('../images/heart-main-left.png');
+    height: 60px;
+    width: 45px;
+    position: relative;
+    right: 0px;
+    float: left;
+    top: 170px;
+}
+
+.heart-glow {
+    background: url('../images/heart-glow.png') no-repeat !important;
+    height: 21px !important;
+    width: 21px !important;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    left: -5px;
+}
+
+.heart-main-right {
+    background: url('../images/heart-main-right.png') no-repeat;
+    height: 47px;
+    width: 45px;
+    position: absolute;
+    right: -11px;
+    bottom: 655px;
+    float: right;
+}
+
+.js-popup-incomming {
+    position: absolute;
+    right: -11px;
+    bottom: 595px;
+    float: right;
+}
+
+.left-small-hearts-wrapper {
+    position: relative;
+    bottom: 13px;
+    left: 24px;
+}
+
+.right-small-hearts-wrapper {
+position: relative;
+bottom: 13px;
+left: 121px;
+}
+
+.heart {
+    background: url('../images/heart-inactive.png') no-repeat;
+    float: left;
+    height: 10px;
+    width: 12px;
+    margin: 0 7px 0 0;
+    position: relative;
+}
+
+.heart-active {
+    background: url('../images/heart-active.png') no-repeat;
+    float: left;
+    height: 10px;
+    width: 12px;
+    margin: 0 7px 0 0;
+    overflow: hidden;
+}
+
+.winning-glow {
+   /* box-shadow: inset 1px 3px 3px #fff;*/
+}
+
+
+.click-to-flip-heart {
+    position: absolute;
+    right: 159px;
+    bottom: -124px;
+}
+.correct-match-heart {
+position: absolute;
+right: 161px;
+bottom: -126px;
+}
+
+.main-bar-bottom {
+    background: url('../images/main-bar-bottom2.png') no-repeat;
+    margin: 0 auto;
+    height: 83px;
+    width: 435px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    bottom: 21px;
+    clear: both;
+    right: 7px;
+}
+
+.show-name-left {
+    font-family: "Gotham Bold", Helvetica, sans-serif;
+    position: relative;
+    bottom: 30px;
+    left: -42px;
+    font-size: 16px;
+    color: #f44d89;
+    float: left;
+}
+
+
+.show-name-right {
+    float: right;
+    bottom: 30px;
+    position: relative;
+    font-size: 16px;
+    color: #f44d89;
+    font-family: "Gotham Bold";
+    right: 39px;
+}
+
+
+.link-wrapper {
+    position: relative;
+    left: 180px;
+    margin-bottom: 7px;
+    bottom: 7px;
+}
+
+.name-left {
+    color: #e51858;
+    font-size: 20px;
+    font-family: "Thirty Extra Bold", Brush Script, sans-serif;
+    position: relative;
+    top: 30px;
+    left: 59px;
+    float: left;
+    text-align: left;
+}
+
+.name-right {
+    float: right;
+    color: #e51858;
+    font-size: 20px;
+    font-family: "Thirty Extra Bold";
+    position: relative;
+    top: 30px;
+    right: 40px;
+    text-align: right;
+}
+
+.faq-link {
+    margin-right: 20px;
+    position: relative;
+    left: 25px;
+    color: #fca0be;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rules-link {
+    color: #fca0be;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================
+// Footer
+======================= */
+
+.game-footer {
+    background: #f44d89;
+    position: relative;
+    clear: both;
+}
+
+
+#foreground
+{
+    width: 1644px;
+    height: 686px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#cutoff
+{
+    position:absolute;
+    overflow:hidden;
+    width: 548px;
+    height: 741px;
+}
+
+#page_height
+{
+    width: 548px;
+    height: 741px;
+}
+
+.welcome_heart {
+    position:absolute;
+    width: 548px;
+    height: 741px;
+    left:0px;
+    background: url('../images/game_intro.jpg') left top no-repeat transparent;
+}
+
+#welcome
+{
+    position: absolute;
+    width: 548px;
+    top: 468px;
+    text-align: center;
+    left: 0px;
+    color:#d8d7d1;
+}
+
+#welcome #faq_links {
+    padding-top:22px;
+    margin:auto;
+}
+
+#welcome #faq_links a {
+    font-size: 14.15px;
+    color:#d8d7d1;
+    font-weight:normal;
+    font-family: 'Gotham Book', Helvetica, sans-serif;
+}
+
+#enter #play_button {
+    display:block;
+    height:92px;
+    width:165px;
+    margin:0 0 0 330px;
+    padding:0px;
+    cursor: hand;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+
+
+
+/* =====================
+// Thank You Page
+======================= */
+
+.thank-you-wrapper-post-popup {
+    position: relative;
+    width: 425px;
+    height: 518px;
+    margin: 0 auto;
+    left: 37px;
+    top: 78px;
+}
+
+.thank-you {
+    width: 370px;
+    height: 317px;
+    background: #f0e9d8;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.43);
+    box-shadow: 0 0 20px rgba(0,0,0,0.43);
+}
+
+.thank-you-inner-wrapper {
+    height: 415px;
+    width: 370px;
+    margin: 0 auto;
+    position: relative;
+    top: 29px;
+}
+
+.thank-you-inner-wrapper > h1 {
+    font-size: 39.12px;
+    color: #e51858;
+    font-family: "Gotham Bold", Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    top: 17px;
+}
+
+
+
+
+
+
+
+/* Thank you page at end without window popup */
+
+#thank-you-wrapper {
+    position: relative;
+    width: 425px;
+    height: 518px;
+    margin: 0 auto;
+    left: 37px;
+    top: 78px;
+}
+
+.thank-you {
+    width: 370px;
+    height: 317px;
+    background: #f0e9d8;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.43);
+    box-shadow: 0 0 20px rgba(0,0,0,0.43);
+}
+
+.thank-you-inner-wrapper {
+    height: 415px;
+    width: 370px;
+    margin: 0 auto;
+    position: relative;
+    top: 29px;
+}
+
+.thank-you-inner-wrapper > h1 {
+    font-size: 39.12px;
+    color: #e51858;
+    font-family: "Gotham Bold", Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    top: 17px;
+}
+
+.border-wrapper {
+    color: #e51858;
+    width: 360px;
+    height: 90px;
+    margin-left: 8px;
+    margin-top: 60px;
+    
+    position: relative;
+    bottom: 8px;
+
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+.button-wrapper {
+    margin-top: -51px;
+    margin-left: -9px;
+}
+
+.border-wrapper > p {
+    font-family: "Gotham Bold";
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    margin: 4px 0 0 0;
+}
+
+a.enter-sweeps {
+    margin: 35px 0 0 50px;
+    float: left;
+}
+
+a.play-again {
+    margin: 35px 0 0 20px;
+    float: left;
+}
+
+.sharing-wrapper a {
+    float: left;
+    margin-right: 5px;
+}
+
+.sharing-wrapper {
+    clear: both;
+    position: relative;
+    top: 30px;
+    left: 175px;
+}
+
+.sharing-wrapper > p {
+font-size: 15px;
+float: left;
+color: #e51858;
+position: relative;
+top: 5px;
+margin-right: 13px;
+font-family: "Gotham Bold", Helvetica, sans-serif;
+}

@@ -1,0 +1,794 @@
+body
+{
+	//background-color: #f2c92f;
+	min-width: 548px;
+	font-family: 'Gotham Light', Helvetica, sans-serif;
+}
+
+#main
+{
+	width: 548px;
+	height: 635px;
+	background: url('../images/bg_sweeps.jpg') center top no-repeat #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+
+#foreground
+{
+	width: 1644px;
+	height: 686px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.sorry #main{
+	background: url('../images/bg_main_sorry.jpg') center top no-repeat #fff;
+}
+
+.enter #main
+{
+	background: url('../images/bg_sweeps.jpg') no-repeat #fff;
+}
+
+.admin #main
+{
+	background: #fff;
+	height: 500px;
+	border: 1px solid #000;
+}
+
+#card.enter,
+#card.enter .hover
+{
+	display: block;
+	cursor: pointer;
+	width: 363px;
+	height: 188px;
+	background: url('../images/card_enter.png') center top no-repeat;
+	position: absolute;
+	top: 571px;
+	left: 59px;
+}
+
+#card.enter .hover
+{
+	top: 3px;
+	bottom: initial;
+	left: 0px;
+	background-position: 0 -191px;
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+#card.enter:hover .hover
+{
+	opacity: 1;
+}
+
+#card.closed
+{
+	width: 240px;
+	position: absolute;
+	top: 610px;
+	left: 140px;
+	text-align: center;
+}
+
+.game-footer{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 548px;
+	background: #f44d89;
+}
+
+
+#logo
+{
+	display: block;
+	height: 10px;
+	width: 170px;
+	position: absolute;
+	top: 0px;
+	height: 53px;
+}
+
+/* Sweepstakes Entry Form */
+
+form .row
+{
+	//overflow: hidden;
+	margin-bottom: 5px;
+	height: 35px;
+}
+
+form .row .left,
+form .row .right
+{
+	width: 126px;
+	display: block;
+	float: left;
+	font-size: 10px;
+}
+
+form .row .right
+{
+	padding-left:22px;
+}
+
+form .row input
+{
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+form select
+{
+	z-index: 10;
+}
+
+form input[type="text"]
+{
+	background: #fff;
+	border: 1px solid #998675;
+	outline: none;
+	height: 16px;
+	width: 123px;
+	padding:0px;
+	margin: 4px 0 0 0;
+	color: #323232;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	padding-left: 2px;
+}
+
+form input[type="text"]:focus
+{
+	border: 2px solid #e51858;
+}
+
+form label
+{
+	position: relative;
+	font-family: Helvetica, sans-serif;
+}
+
+form #agree-to label
+{
+	display: block;
+	clear: both;
+}
+
+label.active .focus{
+	width: 51px;
+	height: 31px;
+	display: block;
+	
+	z-index: 5;
+	position: absolute;
+	top: 16px;
+	left: -2px;
+}
+
+
+#sweeps
+{
+	position: absolute;
+	top: 73px;
+	left: 686px;
+	width: 275px;
+	color: #e51858;
+}
+
+.sweeps_card {
+	position:absolute;
+	width: 548px;
+	height: 557px;
+	left:548px;
+	margin: 7px 0 0 49px;
+	background: url('../images/card_bg.png') left top no-repeat transparent;
+}
+
+.thanks_card {
+	position:absolute;
+	width: 548px;
+	height: 557px;
+	left:1096px;
+	margin: 7px 0 0 43px;
+	background: url('../images/card_bg.png') left top no-repeat transparent;
+}
+
+.prizes_card {
+	position:absolute;
+	width: 548px;
+	height: 557px;
+	left:-548px;
+	margin: 11px 0 0 39px;
+	background: url('../images/prize_bg.png') left top no-repeat transparent;
+}
+
+.agreements {
+	padding: 35px 0 20px 16px;
+	background: url('../images/sweeps_border.png') 1px 12px no-repeat transparent;
+}
+
+.thanks_border {
+	padding:22px 0;
+	background: url('../images/thanks_border.png') 82px 13px no-repeat transparent;
+}
+
+.welcome_heart {
+	position:absolute;
+	width: 548px;
+	height: 557px;
+	left:0px;
+	margin: 45px 0 0 49px;
+	background: url('../images/heart-bg.png') left top no-repeat transparent;
+}
+
+#sweeps .instructions
+{
+	font-size: 19px;
+	font-family: 'ProximaNovaA-Bold';
+	line-height: 22px;
+	margin-bottom: 25px;
+}
+
+.label-state
+{
+	width: 52px 		!important;
+}
+
+.label-state select
+{
+	width: 50px  		!important;
+}
+
+.label-zip
+{
+	width: 67px  		!important;
+}
+
+.label-zip input
+{
+	width: 65px  		!important;
+}
+
+.label-gender
+{
+	width: 50px         !important;
+}
+
+.label-gender select
+{
+	width: 50px 		!important;
+}
+
+.label-cable
+{
+	width: 126px         !important;
+}
+
+.label-cable select
+{
+	width: 126px 		!important;
+}
+
+#stateDD-button
+{
+	width: 49px			!important;
+}
+
+#stateDD-menu
+{
+	width: 195px 		!important;
+}
+
+#stateDD-button .ui-selectmenu-status
+{
+	overflow: hidden;
+	width: 0px;
+	padding: 1px 30px 0 5px;
+}
+
+#genderDD-button
+{
+	width: 49px			!important;
+}
+
+#genderDD-menu
+{
+	width: 100px 		!important;
+}
+
+#genderDD-button .ui-selectmenu-status
+{
+	overflow: hidden;
+	width: 0px;
+	padding: 1px 30px 0 7px;
+}
+
+
+#cableDD-button
+{
+	width: 123px			!important;
+}
+
+#cableDD-menu
+{
+	width: 280px 		!important;
+}
+
+#cableDD-button .ui-selectmenu-status
+{
+	overflow: hidden;
+	width: 96px;
+	padding: 1px 90px 0 7px;
+}
+
+
+.ui-selectmenu
+{
+	background: white 	!important;
+	border-radius: 0 	!important;
+	border: 1px solid #998675 		!important;
+	margin: 0px 	!important;
+	padding:0px     !important;
+	top: 1px			!important;
+	height: 16px 		!important;
+	outline: none 		!important;
+	z-index: 10			!important;
+}
+
+.ui-selectmenu,
+.ui-selectmenu-status,
+.ui-widget-content a
+{
+	//padding: 9px 8px 8px 9px;
+	color: #323232;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+
+.ui-state-default .ui-icon {
+	background: url(images/ui-icons_888888_256x240.png) #fff;
+	right:0px;
+	-webkit-transform: rotateX(180deg);
+}
+
+.agree-to
+{
+	font-size: 11px;
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.agree-to input[type="checkbox"]
+{
+	float: left;
+}
+
+.agree-to .description
+{
+	float: left;
+	display: block;
+	margin: 3px 0 0 3px;
+	width: 235px;
+	line-height: 11px;
+	font-family: Helvetica, sans-serif;
+}
+
+#submit
+{
+	width: 276px;
+	height: 25px;
+	background: url('../images/form_submit_bg.png') left top no-repeat transparent;
+	display: block;
+	border: none;
+	color: #fff;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	left: 0px;
+	top: 400px;
+	font-family: 'ProximaNovaA-Bold', Arial, sans-serif;
+	padding: 0px 0px;
+}
+
+#submit .label{
+	z-index: 10;
+	display: block;
+	position: relative;
+	font-size:20px;
+	font-weight:normal;
+	text-align:center;
+	padding-top:4px;
+}
+
+#submit .hover
+{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 168px;
+	height: 64px;
+	background: url('../images/form_submit_bg.png') left -65px no-repeat transparent;
+	z-index: 5;
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+#submit:hover .hover
+{
+	opacity: 1;
+}
+
+#goto_game
+{
+	width: 161px;
+	height: 27px;
+	background: url('../images/goto_game_bg.png') left top no-repeat transparent;
+	display: block;
+	border: none;
+	color: #fff;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	left: 117px;
+	top: 400px;
+	font-family: 'ProximaNovaA-Bold', Arial, sans-serif;
+	padding: 0px 0px;
+}
+
+a {
+	outline: none;
+}
+
+#goto_game a {
+	color:#fff;
+	text-decoration:none;
+	z-index: 10;
+	display: block;
+	position: relative;
+	font-size:16px;
+	font-weight:normal;
+	text-align:center;
+	padding-top:6px;
+	outline: none;
+}
+
+.email-error #error
+{
+	z-index: 9999;
+	font-size:13px;
+	line-height: 17px;
+	display: block;
+	position: absolute;
+	top: 72px;
+	text-align: center;
+	width: 158px;
+	height: 135px;
+	color: #e51858;
+	padding:32px;
+	margin-left: 20px;
+	background: url('../images/error_bg.png') left top no-repeat transparent;
+}
+
+.missing-error #missing
+{
+	z-index: 9999;
+	font-size:12px;
+	line-height: 15px;
+	display: block;
+	position: absolute;
+	top: 22px;
+	text-align: center;
+	width: 243px;
+	color: #e51858;
+	margin-left: 20px;
+}
+
+#missing .expanding_bg {
+	float:left;
+	background: url('../images/missing_bg.png') left top repeat-y transparent;
+}
+
+.error_title {
+	float:left;
+	text-align:left;
+	padding: 0 42px 10px 42px;
+	font-size:.9em;
+}
+
+.ok_button {
+	padding-top:10px;
+}
+
+#missing li {
+	text-align:left;
+	margin-left:47px;
+}
+
+#sweeps.email-error .instructions
+{
+	margin-bottom: 59px;
+}
+
+form h1 {
+	font-size: 19px;
+	text-transform: uppercase;
+	font-family: 'ProximaNovaA-Bold', Arial, sans-serif;
+	text-align:center;
+}
+
+#welcome
+{
+	position: absolute;
+	width: 472px;
+	top: 298px;
+	text-align: center;
+	left: 51px;
+	color:#E51858;
+}
+
+#welcome #enter {
+	margin-right:41px;
+}
+
+#enter #enter_button {
+	display:block;
+	height:92px;
+	width:165px;
+	margin:auto;
+	cursor: hand;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+
+#welcome #faq_links {
+	padding-top:22px;
+	margin:auto;
+}
+
+#welcome #faq_links a {
+	font-size: 14.15px;
+	color:#fca0be;
+	font-weight:normal;
+	font-family: 'Gotham Book', Helvetica, sans-serif;
+}
+
+#welcome #prizes {
+	height:92px;
+	margin-left:268px;
+}
+
+#welcome #prize_links {
+	padding-top:48px;
+	margin-left: 8px;
+}
+
+#welcome #prize_links a {
+	font-size: 12px;
+	color:#e51858;
+	font-weight:normal;
+	font-family: 'Gotham Bold', Helvetica, sans-serif;
+	outline: none;
+}
+
+#sweeps-prizes
+{
+	position: absolute;
+	width: 395px;
+	top: 71px;
+	text-align: center;
+	left: -483px;
+	color:#E51858;
+}
+
+.prizex
+{
+	position: absolute;
+	width:20px;
+	height:20px;
+	top: -19px;
+	left: 363px;
+}
+
+#sweeps-prizes h1
+{
+	font-size: 24px;
+	text-transform: uppercase;
+	font-family: 'Gotham Bold', Helvetica, sans-serif;
+}
+
+#sweeps-prizes #prize-sub-message
+{
+	font-size: 10px;
+	width:300px;
+	margin: 148px 0 10px 60px;
+	line-height: 16px;
+	font-weight:normal;
+	text-align:left;
+	font-family: Helvetica, sans-serif;
+}
+
+#thank-you
+{
+	position: absolute;
+	width: 395px;
+	top: 71px;
+	text-align: center;
+	left: 1168px;
+	color:#E51858;
+}
+
+#thank-you h1
+{
+	font-size: 38px;
+	text-transform: uppercase;
+	font-family: 'Gotham Bold', Arial, sans-serif;
+}
+
+#thank-you h3
+{
+	font-size: 28px;
+	line-height: 32px;
+	margin-bottom: 36px;
+	margin-top:36px;
+	font-weight:normal;
+	font-family: 'Gotham Book', Arial, sans-serif;
+}
+
+#thank-you h2
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: 'Gotham Bold', Arial, sans-serif;
+	margin-bottom: 8px;
+}
+
+#thank-you #thank-you-sub-message
+{
+	font-size: 13px;
+	line-height: 16px;
+	font-weight:normal;
+	font-family: 'Gotham Book', Arial, sans-serif;
+}
+
+.social-buttons {
+	margin:20px 0;
+	height: 16px;
+}
+
+#thank-you hr
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	margin: 21px 0;
+	width: 100%;
+}
+
+/* Admin Page */
+
+.admin #main{
+	padding: 50px;
+	width: 280px;
+	margin-top: 30px;
+	height: 290px;
+}
+
+.admin input[type="text"],
+.admin input[type="password"]
+{
+	border: none;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+	height: 30px;
+	width: 250px;
+	display: block;
+}
+
+/* Error Classes */
+.error .ui-selectmenu {
+	border-color:#fff !important;
+	height:13px !important;
+
+}
+.error input[type="text"],
+.error input[type="password"]
+{
+	border: 2px solid #e51858;
+}
+
+.ie .error input[type="checkbox"]
+{
+	outline: none;
+	border: 2px solid #e51858;
+	margin:0px;
+	padding:0px;
+}
+
+.error input[type="checkbox"]
+{
+	outline: 2px solid #e51858;
+}
+
+.ie .error select
+{
+	outline: 2px solid #e51858;
+}
+
+.label-gap {
+	float:left;
+	padding-bottom:3px;
+}
+
+.error .label-gap {
+	float:left;
+	padding-bottom:6px;
+}
+
+.label-state.error .label-gap
+{
+	padding-bottom:5px;
+}
+
+.label-cable.error .label-gap
+{
+	padding-bottom:5px;
+}
+
+.safari.label-state.error .label-gap
+{
+	padding-bottom:6px;
+}
+
+.safari.label-cable.error .label-gap
+{
+	padding-bottom:6px;
+}
+
+.error span
+{
+	outline: 2px solid #e51858;
+	padding-bottom: 5px;
+}
+
+.error .ui-selectmenu span {
+	outline: none;
+	padding-bottom: 0px;
+}
+
+.error .terms {
+	outline: none;
+	padding-bottom: 0px;
+}
+
+.hidden
+{
+	display: none;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }

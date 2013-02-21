@@ -1,0 +1,149 @@
+/* =====================
+// GLOBAL FILES REQUIRED
+// FOR EVERY PAGE
+======================= */
+
+/* Imports */
+@import 'reset.css';
+
+/* Mixins */
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+/* Required Global Statements */
+
+::-webkit-selection { background: pink; }
+   ::-moz-selection { background: pink; }
+        ::selection { background: pink; }
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../css/fonts/gotham-bold-webfont.eot');
+    src: url('../css/fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/gotham-bold-webfont.woff') format('woff'),
+         url('../css/fonts/gotham-bold-webfont.ttf') format('truetype'),
+         url('../css/fonts/gotham-bold-webfont.svg#gotham_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('../css/fonts/gotham-light-webfont.eot');
+    src: url('../css/fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/gotham-light-webfont.woff') format('woff'),
+         url('../css/fonts/gotham-light-webfont.ttf') format('truetype'),
+         url('../css/fonts/gotham-light-webfont.svg#gotham_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Thirty Extra Bold';
+    src: url('../css/fonts/thirty-extra-bold-webfont.eot');
+    src: url('../css/fonts/thirty-extra-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../css/fonts/thirty-extra-bold-webfont.woff') format('woff'),
+         url('../css/fonts/thirty-extra-bold-webfont.ttf') format('truetype'),
+         url('../css/fonts/thirty-extra-bold-webfont.svg#thirsty_script_extraboldRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('/css/fonts/gotham-book.ttf');
+}
+
+.footer-inner {
+    width: 510px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 8px;
+}
+
+.footer-inner img {
+	padding:5px;
+}
+
+.weight_watchers_text {
+    float:left;
+    margin-top: 5px;
+    width:280px;
+    font-size: 10px;
+    line-height: 11px;
+    color: #fff;
+    font-family: "Gotham Light", Helvetica, sans-serif;
+}
+
+.weight_watchers_text a {
+    color: pink;
+}
+
+.footer-left {
+    width:285px;
+    float:left;
+    margin-top:8px;
+    margin-left:18px;
+}
+
+.footer-right {
+    width:225px;
+    float:right;
+    margin-top:8px;
+    margin-right:18px;
+}
+
+.sponsor-by {
+    font-family: 'Gotham Book', Helvetica, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    bottom: 6px;
+    margin-right: 10px;
+}
+
+.be-mine {
+    text-align: right;
+    font-size: 13px;
+    color: #fff;
+    font-family: "Gotham Book", Helvetica, sans-serif;
+    font-weight:bold;
+}
+
+.premier-time {
+    text-align: right;
+    width:225px;
+    font-size: 11px;
+    line-height: 20px;
+    color: #fff;
+    font-family: "Gotham Light", Helvetica, sans-serif;
+}
+
+.footer-right-wrapper {
+    position: relative;
+}
+
+.game-footer .disclaimer {
+    color:#fff;
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 10px;
+    font-family: "Gotham Light";
+    text-align:right;
+}
+
+.game-footer {
+    height: 78px;
+}
+
+.disclaimer > a {
+    color: #fca0be;
+}
+
+#variable-content-date-picker {
+    z-index:9999;
+}
